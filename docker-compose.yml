@@ -7,3 +7,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8080:8080
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: milktea
+    ports:
+      - 3305:3306
