@@ -18,7 +18,9 @@ jobs:
           distribution: 'adopt'
 
       - name: Build Spring Boot application with Gradle
-        run: ./gradlew clean build -x test
+        run: |
+          chmod +x ./gradlew
+          ./gradlew clean build -x test
 
       - name: Docker Build
         run: |
