@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class MemberController {
 
-    @GetMapping("/login")
+    @GetMapping
     public String showLoginPage() {
         return "member/login";
     }
