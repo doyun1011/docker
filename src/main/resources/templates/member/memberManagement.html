@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Member Management</title>
+</head>
+<body>
+<h1>Member Management</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Password</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="member : ${members}">
+        <td th:text="${member.id}"></td>
+        <td th:text="${member.username}"></td>
+        <td th:text="${member.password}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<form method="post" th:action="@{/members}">
+    <label>Username:</label>
+    <input type="text" name="username" required>
+    <br>
+    <label>Password:</label>
+    <input type="password" name="password" required>
+    <br>
+    <button type="submit">Add Member</button>
+</form>
+</body>
+</html>
