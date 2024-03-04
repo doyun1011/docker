@@ -41,5 +41,6 @@ jobs:
           application_name: spring-docker
           environment_name: Spring-docker-env
           existing_bucket_name: elasticbeanstalk-ap-northeast-2-637423306910
+          region: ap-northeast-2
           version_label: ${{ github.sha }}
           wait_for_deploy: true
