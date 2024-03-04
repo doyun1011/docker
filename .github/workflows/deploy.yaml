@@ -24,7 +24,7 @@ jobs:
 
       - name: Docker Build
         run: |
-          docker build -t doyu301/myapp .
+          docker build -t doyu301/myapp ./
           docker tag my-spring-app:latest my-spring-app:${{ github.sha }}
 
       - name: Docker Login
