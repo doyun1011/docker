@@ -41,8 +41,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
-          application_name: taro-2
-          environment_name: Taro-2-env
+          application_name: taro-3
+          environment_name: Taro-3-env
           existing_bucket_name: elasticbeanstalk-ap-northeast-2-637423306910
           region: ap-northeast-2
           version_label: ${{ github.sha }}
